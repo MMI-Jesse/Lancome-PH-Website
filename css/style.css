@@ -1,0 +1,345 @@
+/*    Lancome Privacy Policy CSS    
+
+Author: MobileMINDS Inc
+
+*/
+
+/* FONT FACES */
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url('../fonts/HelveticaNeue Light.ttf') format("truetype");
+  font-weight: light;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url('../fonts/HelveticaNeue Medium.ttf') format("truetype");
+  font-weight: medium;
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Miller Display";
+  src: url('../fonts/MillerDisplay-Light.ttf') format("truetype");
+  font-weight: light;
+  font-style: normal;
+}
+
+:root {
+  --black: #101010;
+  --greyBG: #F7F6F7;
+  --pink: #ce0058;
+  --lc-gradient-pink: linear-gradient(96deg, #EBCDD4 44.75%, #FEEAE9 70.09%);
+  --lc-gradient-silver: linear-gradient(90deg, #DAD2D0 0.04%, #BAB6B6 30.41%, #EBE9E9 64.51%, #CCC9CA 102.34%);
+  --color-text: #0B0B0B;
+  --button-font-color: #000000;
+  --border-color-form: #999999;
+  --content-width: 1080px;
+  --card-radius: 20px;
+  --text-body: 'Helvetica Neue', sans-serif;
+  --text-heading: 'Miller Display', serif;
+}
+
+html {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: var(--text-body);
+  color: var(--color-text);
+}
+
+h1,
+h1 *,
+h2,
+h2 *,
+h3,
+h3 *,
+h4,
+h4 *,
+h5,
+h5 *,
+h6,
+h6 * {
+  font-family: var(--text-heading);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+p {
+  font-weight: 100;
+}
+
+a {
+  color: var(--color-text);
+}
+
+.lc-font-sanserif,
+.lc-font-sanserif * {
+  font-family: var(--text-body);
+}
+
+.lc-font-serif,
+.lc-font-serif * {
+  font-family: var(--text-heading);
+}
+
+body {
+
+  font-family: "Helvetica Neue", sans-serif;
+  min-height: 100%;
+  overflow-x: hidden;
+
+  /* Backgroud */
+  background: var(--lc-gradient-pink);
+}
+
+.font-serif {
+  font-family: "Miller Display";
+}
+
+header.navbar {
+  background-color: var(--black);
+  padding: 2rem 1rem;
+}
+
+footer {
+  background-color: white;
+  padding: 1rem 1rem;
+}
+
+footer p {
+  margin-bottom: 0;
+  display: inline-flex;
+}
+
+/* Button & Tabs */
+button.btn {
+  border-radius: 6px;
+  padding: 20px 36px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+button.btn.lc-btn-white,
+.nav button.lc-tab-white {
+  font-weight: 800;
+  border: 1px solid #181818;
+  background: #FDFAFA;
+  color: var(--color-text);
+}
+
+button.btn.lc-btn-white:hover,
+.nav button.lc-tab-white:hover,
+.nav button.lc-tab-white.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.nav button.lc-tab-white {
+  height: 100%;
+}
+
+button.btn.lc-btn-black {
+  font-weight: 200;
+  border: none;
+  background: #000;
+  color: #fff;
+}
+
+button.btn.lc-btn-black:hover,
+a.ln-social-link:hover {
+  background: var(--pink);
+}
+
+a:hover {
+  color: var(--pink);
+}
+
+/* Checkbox */
+input[type=checkbox].form-check-input {
+  border-color: #D0D0D0;
+  border-radius: 3px;
+  width: 22px;
+  height: 22px;
+  margin-bottom: 6px;
+}
+
+input[type=checkbox].form-check-input:checked {
+  background-color: #000;
+}
+
+input[type=checkbox].form-check-input:focus {
+  box-shadow: none;
+}
+
+/* Form Control */
+label.form-label {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 10px;
+}
+
+input.lc-form-input {
+  border: none;
+  background: none;
+  border-bottom: 1px solid var(--border-color-form);
+  border-radius: 0;
+  padding: 10px 0;
+}
+
+input.lc-form-input::placeholder,
+select {
+  text-transform: uppercase;
+}
+
+input.lc-form-input:focus,
+select.form-select:focus {
+  box-shadow: none;
+  border-color: #000;
+  border-width: 2px;
+  background-color: transparent;
+}
+
+select.form-select {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px 20px;
+  border: 1px solid var(--border-color-form);
+  border-radius: 4px;
+}
+
+.lc-form-card {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Modal */
+.modal-content {
+  border-radius: 0;
+}
+
+a.ln-social-link {
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+a.ln-social-link img {
+  color: #fff;
+}
+
+/* Banner */
+.banner-signup {
+  background: var(--lc-gradient-pink);
+}
+
+.banner-signup .cta-sample {
+  background: var(--lc-gradient-silver);
+  padding: 3px 9px;
+  font-weight: 800;
+}
+
+/* Banner w/ texts */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Header */
+.header-logo {
+  width: 236px;
+}
+
+.policy-sidebar {
+  grid-area: sidebar;
+  background-color: white;
+}
+
+.policy-content {
+  grid-area: main;
+}
+
+.policy-content .description {
+  background-color: white;
+}
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 360px) {
+  .lc-form-card {
+    padding: 40px 23px;
+  }
+}
+
+@media (max-width: 359px) {
+  .lc-form-card {
+    padding: 35px 20px;
+  }
+
+  .nav li {
+    padding: 1px !important;
+    margin-bottom: 10px;
+  }
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .lc-form-card {
+    padding: 50px 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav button.lc-tab-white {
+    font-size: 12px;
+  }
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  .lc-form-card {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 60px 180px;
+    /* opacity: 0.7; */
+  }
+
+  .policy-layout {
+    display: grid;
+    grid-template-areas: "sidebar main";
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 3rem;
+  }
+
+
+  .policy-sidebar {
+    position: sticky;
+    top: 5rem;
+    display: block !important;
+    height: calc(100vh - 16rem);
+    padding-left: 0.25rem;
+    margin-left: -0.25rem;
+    overflow-y: auto;
+  }
+
+}
+
+/*// X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {}
+
+/*// XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {}
