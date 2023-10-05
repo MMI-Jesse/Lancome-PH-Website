@@ -98,8 +98,6 @@ body {
   font-family: "Helvetica Neue", sans-serif;
   min-height: 100%;
   overflow-x: hidden;
-
-  /* Backgroud */
   background: var(--lc-gradient-pink);
 }
 
@@ -254,11 +252,173 @@ a.ln-social-link img {
 }
 
 /* Banner w/ texts */
-.centered {
-  position: absolute;
+.banner-genefique-1 .position-absolute {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.banner-genefique-1 * {
+  color: #fff;
+  text-shadow: 0px 0px 12px rgba(42, 42, 42, 0.6);
+  text-transform: uppercase;
+}
+
+.banner-genefique-1 #title-advanced {
+  font-size: 2.5rem;
+  line-height: 0.4rem;
+  letter-spacing: 2px;
+}
+
+.banner-genefique-1 #title-genefique {
+  font-size: 4.5rem;
+}
+
+.banner-genefique-1 #body-restore div {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+}
+
+.banner-genefique-1 #body-radiant {
+  padding-top: 15px;
+  letter-spacing: 2px;
+}
+
+.banner-genefique-2 .position-absolute {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 0 40px;
+}
+
+.banner-genefique-2 * {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.banner-genefique-2 #title-instantly {
+  font-size: 2rem;
+}
+
+.banner-genefique-2 #genefique-instant-title {
+  width: fit-content;
+  margin-bottom: 12px;
+}
+
+.banner-genefique-2 #genefique-instant-title hr {
+  border-color: #fff;
+  border-width: 1.5px;
+  opacity: 1;
+  margin: 0;
+}
+
+.banner-genefique-2 #title-after {
+  font-size: 1.7rem;
+}
+
+.banner-genefique-2 .body-percent {
+  font-size: 4.5rem;
+  line-height: 5rem;
+}
+
+.banner-genefique-2 .body-percent-desc {
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+}
+
+.banner-genefique-2 #body-clinical {
+  font-size: 0.9rem;
+  font-weight: 100;
+  text-shadow: 2px 2px 2px rgb(0 0 0 / 50%);
+  margin-left: 40px;
+}
+
+.banner-genefique-2 #genefique-percent-title {
+  margin-bottom: 30px;
+}
+
+.banner-idole-1 .position-absolute {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.banner-idole-1 * {
+  color: #001722;
+  text-shadow: 0px 0px 12px rgb(255 255 255 / 50%);
+  text-transform: uppercase;
+}
+
+.banner-idole-1 #title-idole {
+  font-size: 9rem;
+  letter-spacing: -6px;
+  line-height: 10rem;
+}
+
+.banner-idole-1 #body-fresh div {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 800;
+}
+
+.banner-idole-3 {
+  background: #fff;
+  padding: 30px;
+}
+
+.banner-idole-3 #body-fresh div {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 800;
+}
+
+.banner-idole-3 #title-sophisticated {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 800;
+  padding-bottom: 20px;
+}
+
+.banner-idole-3 .flower-item .image-flower {
+  padding-bottom: 10px;
+}
+
+.banner-idole-3 .flower-item .title-flower {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.banner-idole-3 .flower-item .body-flower {
+  font-size: 1rem;
+  line-height: 20px;
+}
+
+.banner-idole-2 .position-absolute#idole-perfume-title {
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-idole-2 .position-absolute#idole-perfume-ml {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+
+.banner-idole-2 #idole-perfume-ml .body-ml {
+  margin-right: 23px;
+}
+
+.banner-idole-2 #idole-perfume-ml .body-ml div {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 100;
+  padding: 0 36px;
+}
+
+.banner-idole-2 #title-era {
+  font-size: 1.4rem;
+  font-weight: 800;
 }
 
 /* Header */
@@ -294,6 +454,101 @@ a.ln-social-link img {
   .nav li {
     padding: 1px !important;
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .banner-genefique-1 .position-absolute {
+    transform: translate(-50%, 0%);
+    padding-bottom: 20px;
+  }
+
+  .banner-genefique-1 #title-advanced {
+    font-size: 1.8rem;
+    /* line-height: 0.4rem;
+    letter-spacing: 2px; */
+  }
+
+  .banner-genefique-1 #title-genefique {
+    font-size: 2.5rem;
+  }
+
+  .banner-genefique-1 #body-restore div {
+    font-size: 1.4rem;
+    line-height: 24px;
+  }
+
+  .banner-genefique-1 #body-radiant {
+    padding-top: 10px;
+    letter-spacing: 0px;
+  }
+
+  .banner-genefique-2 .position-absolute {
+    padding: 0 8px;
+  }
+
+  .banner-genefique-2 #title-instantly {
+    font-size: 1rem;
+  }
+
+  .banner-genefique-2 #title-after {
+    font-size: 0.8rem;
+  }
+
+  .banner-genefique-2 .body-percent {
+    font-size: 1.5rem;
+    line-height: 1.3rem;
+  }
+
+  .banner-genefique-2 .body-percent-desc {
+    font-size: 0.6rem;
+    letter-spacing: 0px;
+  }
+
+  .banner-genefique-2 #body-clinical {
+    font-size: 0.6rem;
+    margin-left: 0;
+  }
+
+  .banner-genefique-2 #genefique-percent-title {
+    margin-bottom: 10px;
+  }
+
+  .banner-idole-1 #title-idole {
+    font-size: 4rem;
+    letter-spacing: -6px;
+    line-height: 4rem;
+  }
+
+  .banner-idole-1 #body-fresh div {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .banner-idole-2 #idole-perfume-ml .body-ml div {
+    font-size: 1rem;
+    padding: 0 8px;
+  }
+
+  .banner-idole-2 #idole-perfume-ml .body-ml {
+    margin-right: 8px;
+  }
+
+  .banner-idole-3 #title-sophisticated {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+
+  .banner-idole-3 .flower-item {
+    margin-bottom: 25px;
+  }
+
+  .banner-idole-2 .position-absolute#idole-perfume-title {
+    top: 23%;
+  }
+
+  .banner-idole-2 #title-era {
+    font-size: 0.7rem;
   }
 }
 
@@ -336,6 +591,46 @@ a.ln-social-link img {
     overflow-y: auto;
   }
 
+}
+
+@media (max-width: 1024px) and (min-width: 426px) {
+  .banner-genefique-2 #title-instantly {
+    font-size: 1.8rem;
+  }
+
+  .banner-genefique-2 #title-after {
+    font-size: 1.5rem;
+  }
+
+  .banner-genefique-2 .body-percent {
+    font-size: 2.5rem;
+    line-height: 2rem;
+  }
+
+  .banner-genefique-2 .body-percent-desc {
+    font-size: 1rem;
+    letter-spacing: 3px;
+  }
+
+  .banner-genefique-2 #body-clinical {
+    font-size: 0.9rem;
+    font-weight: 100;
+    text-shadow: 2px 2px 2px rgb(0 0 0 / 50%);
+    margin-left: 40px;
+  }
+
+  .banner-idole-2 #idole-perfume-ml .body-ml div {
+    font-size: 1.5rem;
+    padding: 0 18px;
+  }
+
+  .banner-idole-2 .position-absolute#idole-perfume-title {
+    top: 17%;
+  }
+
+  .banner-idole-2 #title-era {
+    font-size: 1rem;
+  }
 }
 
 /*// X-Large devices (large desktops, 1200px and up)*/
