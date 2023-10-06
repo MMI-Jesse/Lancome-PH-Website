@@ -34,61 +34,70 @@
       />
     </header>
 
-    <main class="container-xxl px-2 px-sm-4 mt-5">
+    <main class="sign-up container-xxl mt-5">
       <div class="lc-form-card mb-5">
         <div class="text-center mb-5">
           <div>STEP 1</div>
-          <h3 class="lc-font-sanserif mb-3">
+          <h4 class="lc-font-sanserif mb-3">
             SIGN UP FOR YOUR<br />FREE LANCÔME BEAUTY SAMPLE SET
-          </h3>
+          </h4>
           <p>While stocks last. Terms and conditions apply.</p>
         </div>
 
         <form class="mb-1 mb-lg-5">
           <div class="row d-flex align-items-end">
-            <div class="col-lg mb-3">
+            <div class="col-lg lc-form-item form-floating mb-3">
               <input
                 type="text"
                 class="form-control lc-form-input"
+                for="floatFirstName"
                 id="firstName"
                 placeholder="First Name"
               />
+              <label for="floatFirstName">First Name</label>
             </div>
-            <div class="col-lg mb-3">
+            <div class="col-lg lc-form-item form-floating mb-3">
               <input
                 type="text"
                 class="form-control lc-form-input"
+                for="floatLastName"
                 id="lastName"
                 placeholder="Last Name"
               />
+              <label for="floatLastName">Last Name</label>
             </div>
           </div>
 
           <div class="row d-flex align-items-end">
-            <div class="col-lg mb-lg-5 mb-4">
-              <label for="mobileNum" class="form-label">Mobile Number</label>
+            <div class="col-lg lc-form-item form-floating mb-4">
               <input
                 type="tel"
                 class="form-control lc-form-input"
+                for="floatMobileNum"
                 id="mobileNum"
                 value="+63"
+                placeholder="Mobile Number"
               />
+              <label for="floatMobileNum">Mobile Number</label>
             </div>
-            <div class="col-lg mb-lg-5 mb-4">
+            <div class="col-lg lc-form-item form-floating mb-4">
               <input
                 type="email"
                 class="form-control lc-form-input"
+                for="floatEmail"
                 id="email"
-                placeholder="Email Address"
+                placeholder="Email"
               />
+              <label for="floatEmail">Email Address</label>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-lg mb-lg-5 mb-4">
+            <div class="col-lg form-floating mt-sm-0 mt-2 mb-4">
               <select
                 class="form-select"
-                aria-label="Default select example"
+                aria-label="Gender drop-down"
+                id="floatGenderLbl"
                 required
               >
                 <option disabled="disabled" selected="selected" value="">
@@ -96,13 +105,20 @@
                 </option>
                 <option value="1">Male</option>
                 <option value="2">Female</option>
+                <option value="3">Undisclosed</option>
               </select>
+              <label for="floatGenderLbl">Gender</label>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-lg mb-4">
-              <select class="form-select" aria-label="Default select example">
+            <div class="col-lg form-floating mb-4">
+              <select
+                class="form-select"
+                aria-label="Province drop-down"
+                id="floatProvinceLbl"
+                required
+              >
                 <option disabled="disabled" selected="selected" value="">
                   Province
                 </option>
@@ -192,23 +208,32 @@
                 <option value="84">ZAMBOANGA DEL SUR</option>
                 <option value="85">ZAMBOANGA SIBUGAY</option>
               </select>
+              <label for="floatProvinceLbl">Province</label>
             </div>
-            <div class="col-lg mb-4">
-              <select class="form-select" aria-label="Default select example">
+
+            <div class="col-lg form-floating mb-4">
+              <select
+                class="form-select"
+                aria-label="City drop-down"
+                id="floatCityLbl"
+                required
+              >
                 <option disabled="disabled" selected="selected" value="">
                   City
                 </option>
               </select>
+              <label for="floatCityLbl">City</label>
             </div>
           </div>
 
-          <div class="row d-flex align-items-end">
-            <div class="col-lg mb-lg-0 mb-4">
-              <label for="month" class="form-label">Day of birth</label>
+          <div class="row d-flex align-items-end lc-form-group">
+            <label>Day of birth</label>
+            <div class="col-lg form-floating mb-lg-0 mb-4">
               <select
-                id="month"
                 class="form-select"
-                aria-label="Default select example"
+                aria-label="Birth Month drop-down"
+                id="floatMonthLbl"
+                required
               >
                 <option disabled="disabled" selected="selected" value="">
                   Month
@@ -226,9 +251,16 @@
                 <option value="11">November</option>
                 <option value="12">December</option>
               </select>
+              <label for="floatMonthLbl">Month</label>
             </div>
-            <div class="col-lg mb-lg-0 mb-4">
-              <select class="form-select" aria-label="Default select example">
+
+            <div class="col-lg form-floating mb-lg-0 mb-4">
+              <select
+                class="form-select"
+                aria-label="Birth Date drop-down"
+                id="floatDayLbl"
+                required
+              >
                 <option disabled="disabled" selected="selected" value="">
                   Day
                 </option>
@@ -264,9 +296,16 @@
                 <option value="30">30</option>
                 <option value="31">31</option>
               </select>
+              <label for="floatDayLbl">Day</label>
             </div>
-            <div class="col-lg mb-lg-0 mb-4">
-              <select class="form-select" aria-label="Default select example">
+
+            <div class="col-lg form-floating mb-lg-0 mb-4">
+              <select
+                class="form-select"
+                aria-label="Birth Year drop-down"
+                id="floatYearLbl"
+                required
+              >
                 <option disabled="disabled" selected="selected" value="">
                   Year
                 </option>
@@ -342,6 +381,7 @@
                 <option value="2006">2006</option>
                 <option value="2007">2007</option>
               </select>
+              <label for="floatYearLbl">Year</label>
             </div>
           </div>
         </form>
@@ -379,12 +419,12 @@
             <li class="nav-item pe-1 col" role="presentation">
               <button
                 class="nav-link btn lc-tab-white w-100"
-                id="pills-home-tab"
+                id="pills-genefique-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#pills-home"
+                data-bs-target="#pills-genefique"
                 type="button"
                 role="tab"
-                aria-controls="pills-home"
+                aria-controls="pills-genefique"
                 aria-selected="true"
               >
                 ADVANCED GENEFIQUE
@@ -393,12 +433,12 @@
             <li class="nav-item ps-1 col" role="presentation">
               <button
                 class="nav-link btn lc-tab-white w-100"
-                id="pills-profile-tab"
+                id="pills-idole-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#pills-profile"
+                data-bs-target="#pills-idole"
                 type="button"
                 role="tab"
-                aria-controls="pills-profile"
+                aria-controls="pills-idole"
                 aria-selected="false"
               >
                 IDOLE
@@ -408,9 +448,9 @@
           <div class="tab-content" id="pills-tabContent">
             <div
               class="tab-pane fade"
-              id="pills-home"
+              id="pills-genefique"
               role="tabpanel"
-              aria-labelledby="pills-home-tab"
+              aria-labelledby="pills-genefique-tab"
               tabindex="0"
             >
               <!-- Advanced Genefique content -->
@@ -488,9 +528,9 @@
             </div>
             <div
               class="tab-pane fade"
-              id="pills-profile"
+              id="pills-idole"
               role="tabpanel"
-              aria-labelledby="pills-profile-tab"
+              aria-labelledby="pills-idole-tab"
               tabindex="0"
             >
               <!-- Idole content -->
@@ -597,7 +637,7 @@
             id="exampleCheck1"
           />
           <label class="form-check-label" for="exampleCheck1"
-            >By proceeding with this, I am agreeing to
+            >By checking this box I am agreeing to
             <a href="#">Lancôme's Privacy Policy</a>.
           </label>
         </div>
@@ -606,7 +646,7 @@
           type="button"
           class="btn lc-btn-black w-100"
           data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
+          data-bs-target="#signupThanksModal"
         >
           Sign Up
         </button>
@@ -614,9 +654,9 @@
         <!-- Modal -->
         <div
           class="modal fade"
-          id="exampleModal"
+          id="signupThanksModal"
           tabindex="-1"
-          aria-labelledby="exampleModalLabel"
+          aria-labelledby="Sign Up Thank You"
           aria-hidden="true"
         >
           <div class="modal-dialog modal-dialog-centered">
@@ -626,18 +666,21 @@
               >
                 <h4 class="lc-font-sanserif mb-3">THANK YOU FOR SIGNING UP!</h4>
                 <p>
-                  A confirmation message has been sent to
-                  <strong>+639324483214</strong> and
-                  <strong>elaine.delacruz@gmail.com</strong> on instructions how
-                  to claim your Free Lancome Beauty Sample Set.
+                  A confirmation message will be sent to
+                  <strong>+639324483214</strong>
+                  with instructions on how to claim your Free Lancome Beauty
+                  Sample Set.
                 </p>
                 <div class="card w-75 mb-3">
                   <div class="card-body my-3">
-                    <div>Your free product to be claimed:</div>
-                    <h5>ADVANCED GÉNEFIQUE</h5>
+                    <div class="fw-lighter">
+                      Your free product to be claimed:
+                    </div>
+                    <h5 id="free-product">ADVANCED GÉNEFIQUE</h5>
                     <img
                       src="images/img_genefique.png"
                       alt="Lancome Advanced Genefique"
+                      id="free-product-img"
                     />
                   </div>
                 </div>
@@ -667,7 +710,7 @@
       <footer
         class="d-flex align-items-center justify-content-center text-center mt-5"
       >
-        <p>Copyright © 2023 L’Oréal Philippines Inc . All rights reserved.</p>
+        <p>Copyright © 2023 L’Oréal Philippines Inc. All rights reserved.</p>
       </footer>
     </div>
 
