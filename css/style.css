@@ -1,11 +1,13 @@
-/*    Lancome Privacy Policy CSS    
+/*    San Ka Na style sheet    
 
 Author: MobileMINDS Inc
 
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* FONT FACES */
-@font-face {
+/* @font-face {
   font-family: "Helvetica Neue";
   src: url('../fonts/HelveticaNeue Light.ttf') format("truetype");
   font-weight: light;
@@ -26,9 +28,11 @@ Author: MobileMINDS Inc
   src: url('../fonts/MillerDisplay-Light.ttf') format("truetype");
   font-weight: light;
   font-style: normal;
-}
+} */
 
 :root {
+  --primary: #06D6A0;
+  --secondary: #063E34;
   --black: #101010;
   --greyBG: #F7F6F7;
   --pink: #ce0058;
@@ -40,23 +44,31 @@ Author: MobileMINDS Inc
   --content-width: 1080px;
   --card-radius: 20px;
   --card-color: #FAF3F5;
-  --text-body: 'Helvetica Neue', sans-serif;
-  --text-heading: 'Miller Display', serif;
+  --text-body: 'Jost', sans-serif;
+  --text-heading: 'Jost', serif;
+
+  --content-width: 1080px;
 }
+
 
 html {
   height: 100%;
 }
 
+
 * {
-  margin: 0;
+  /* margin: 0;
   padding: 0;
   border: 0;
   vertical-align: baseline;
   box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+  -webkit-box-sizing: border-box; */
   font-family: var(--text-body);
   color: var(--color-text);
+}
+
+.wrapper {
+  width: var(--content-width);
 }
 
 h1,
@@ -85,6 +97,30 @@ a {
   color: var(--color-text);
 }
 
+nav.navbar {
+  margin: 0px 10px;
+  border-radius: 10px;
+  background: #FFFFFFF0;
+  box-shadow: 0px 4px 8px 0px #86868629;
+  backdrop-filter: blur(14px);
+
+  position: fixed;
+  top: 0;
+}
+
+li.nav-item {
+  margin-left: 10px;
+}
+
+nav a.nav-link {
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23.12px;
+  text-align: left;
+  color: var(--secondary);
+}
+
 .lc-font-sanserif,
 .lc-font-sanserif * {
   font-family: var(--text-body);
@@ -96,10 +132,11 @@ a {
 }
 
 body {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Jost", sans-serif;
   min-height: 100%;
   overflow-x: hidden;
-  background: var(--lc-gradient-pink);
+  margin: 0 auto;
+  /* background: var(--lc-gradient-pink); */
 }
 
 .sign-up {
@@ -128,7 +165,17 @@ footer p {
 }
 
 /* Button & Tabs */
-button.btn {
+button.btn-primary {
+  padding: 5px 17px;
+  border-radius: 100px;
+  border-style: none;
+  background-color: var(--primary);
+  color: var(--black);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* button.btn {
   border-radius: 6px;
   padding: 20px 36px;
   letter-spacing: 0.8px;
@@ -169,7 +216,7 @@ a.ln-social-link:hover {
 
 a:hover {
   color: var(--pink);
-}
+} */
 
 /* Checkbox */
 input[type=checkbox].form-check-input {
@@ -189,101 +236,6 @@ input[type=checkbox].form-check-input:focus {
 }
 
 /* Form Control */
-input,
-select,
-.lc-form-item label {
-  font-size: 14px !important;
-}
-
-label.form-label,
-.form-floating>.form-control:not(:placeholder-shown)~label {
-  font-size: 11.5px;
-  color: var(--color-text) !important;
-}
-
-.lc-form-item label::after {
-  background-color: transparent !important;
-}
-
-label.form-label,
-.lc-form-item label,
-.form-floating>.form-select~label,
-.lc-form-group label {
-  color: var(--color-text);
-  text-transform: uppercase;
-  font-weight: 100;
-}
-
-.lc-form-item label,
-.form-floating>.form-select~label {
-  transition: all 0.15s;
-}
-
-.lc-form-group>label {
-  font-size: 12px;
-  padding-bottom: 8px;
-}
-
-.lc-form-input.form-control {
-  padding: 1rem 1px;
-}
-
-/* Select/Dropdown Float label Default */
-.form-floating>.form-select~label {
-  position: absolute;
-  pointer-events: none;
-  left: 20px;
-  top: 12px;
-}
-
-/* Select/Dropdown Float label Active */
-.form-floating>.form-select:focus~label,
-.form-floating>.form-select:not([value=""]):valid~label {
-  top: -18px;
-  font-size: 14px;
-}
-
-.form-floating>.form-select~label::after {
-  background-color: var(--card-color);
-  height: 2em;
-}
-
-.form-floating>.form-select {
-  padding-top: 0.8rem;
-}
-
-input.lc-form-input {
-  border: none;
-  background: none;
-  border-bottom: 1px solid var(--border-color-form);
-  border-radius: 0;
-  padding: 7px 0;
-}
-
-input.lc-form-input::placeholder,
-select {
-  text-transform: uppercase;
-}
-
-input.lc-form-input:focus,
-select.form-select:focus {
-  box-shadow: none;
-  border-color: #000;
-  border-width: 2px;
-  background-color: transparent;
-}
-
-select.form-select {
-  background-color: rgba(255, 255, 255, 0);
-  padding: 10px 20px;
-  border: 1px solid var(--border-color-form);
-  border-radius: 4px;
-}
-
-.lc-form-card {
-  /* background: rgba(255, 255, 255, 0.7); */
-  background: var(--card-color);
-}
 
 /* Modal */
 .modal-content {
@@ -305,406 +257,22 @@ a.ln-social-link img {
   color: #fff;
 }
 
-/* Banner */
-.banner-signup {
-  background: var(--lc-gradient-pink);
-}
-
-.banner-signup .cta-sample {
-  background: var(--lc-gradient-silver);
-  padding: 3px 9px;
-  font-weight: 800;
-}
-
-/* Banner w/ texts */
-.banner-genefique-1 .position-absolute {
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -30%);
-}
-
-.banner-genefique-1 * {
-  color: #fff;
-  text-shadow: 0px 0px 12px rgba(42, 42, 42, 0.6);
-  text-transform: uppercase;
-}
-
-.banner-genefique-1 #title-advanced {
-  font-size: 2.5rem;
-  line-height: 0.4rem;
-  letter-spacing: 2px;
-}
-
-.banner-genefique-1 #title-genefique {
-  font-size: 4.5rem;
-}
-
-.banner-genefique-1 #body-restore div {
-  font-size: 2.4rem;
-  line-height: 2.4rem;
-}
-
-.banner-genefique-1 #body-radiant {
-  padding-top: 15px;
-  letter-spacing: 2px;
-}
-
-.banner-genefique-2 .position-absolute {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0 40px;
-}
-
-.banner-genefique-2 * {
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.banner-genefique-2 #title-instantly {
-  font-size: 2rem;
-}
-
-.banner-genefique-2 #genefique-instant-title {
-  width: fit-content;
-  margin-bottom: 12px;
-}
-
-.banner-genefique-2 #genefique-instant-title hr {
-  border-color: #fff;
-  border-width: 1.5px;
-  opacity: 1;
-  margin: 0;
-}
-
-.banner-genefique-2 #title-after {
-  font-size: 1.7rem;
-}
-
-.banner-genefique-2 .body-percent {
-  font-size: 4.5rem;
-  line-height: 5rem;
-}
-
-.banner-genefique-2 .body-percent-desc {
-  font-size: 1.2rem;
-  letter-spacing: 4px;
-}
-
-.banner-genefique-2 #body-clinical {
-  font-size: 0.9rem;
-  font-weight: 100;
-  text-shadow: 2px 2px 2px rgb(0 0 0 / 50%);
-  margin-left: 40px;
-}
-
-.banner-genefique-2 #genefique-percent-title {
-  margin-bottom: 30px;
-}
-
-.banner-idole-1 .position-absolute {
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -30%);
-}
-
-.banner-idole-1 * {
-  color: #001722;
-  text-shadow: 0px 0px 12px rgb(255 255 255 / 50%);
-  text-transform: uppercase;
-}
-
-.banner-idole-1 #title-idole {
-  font-size: 9rem;
-  letter-spacing: -6px;
-  line-height: 10rem;
-}
-
-.banner-idole-1 #body-fresh div {
-  font-size: 2rem;
-  line-height: 2.5rem;
-  font-weight: 800;
-}
-
-.banner-idole-3 {
-  background: #fff;
-  padding: 30px;
-}
-
-.banner-idole-3 #body-fresh div {
-  font-size: 2rem;
-  line-height: 2.5rem;
-  font-weight: 800;
-}
-
-.banner-idole-3 #title-sophisticated {
-  font-size: 2rem;
-  line-height: 2.5rem;
-  font-weight: 800;
-  padding-bottom: 20px;
-}
-
-.banner-idole-3 .flower-item .image-flower {
-  padding-bottom: 10px;
-}
-
-.banner-idole-3 .flower-item .title-flower {
-  font-size: 1rem;
-  font-weight: 800;
-}
-
-.banner-idole-3 .flower-item .body-flower {
-  font-size: 1rem;
-  line-height: 20px;
-}
-
-.banner-idole-2 .position-absolute#idole-perfume-title {
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.banner-idole-2 .position-absolute#idole-perfume-ml {
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -25%);
-}
-
-.banner-idole-2 #idole-perfume-ml .body-ml {
-  margin-right: 23px;
-}
-
-.banner-idole-2 #idole-perfume-ml .body-ml div {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 100;
-  padding: 0 36px;
-}
-
-.banner-idole-2 #title-era {
-  font-size: 1.4rem;
-  font-weight: 800;
-}
-
-/* Header */
-.header-logo {
-  width: 236px;
-}
-
-.policy-sidebar {
-  grid-area: sidebar;
-  background-color: white;
-}
-
-.policy-content {
-  grid-area: main;
-}
-
-.policy-content .description {
-  background-color: white;
-}
-
 /*// Small devices (landscape phones, 576px and up)*/
-@media (min-width: 360px) {
-  .lc-form-card {
-    padding: 40px 23px;
-  }
-}
+@media (min-width: 360px) {}
 
-@media (max-width: 359px) {
-  .lc-form-card {
-    padding: 35px 20px;
-  }
+@media (max-width: 359px) {}
 
-  .nav li {
-    padding: 1px !important;
-    margin-bottom: 10px;
-  }
-}
-
-@media (max-width: 425px) {
-  .banner-genefique-1 .position-absolute {
-    transform: translate(-50%, 0%);
-    padding-bottom: 20px;
-  }
-
-  .banner-genefique-1 #title-advanced {
-    font-size: 1.8rem;
-    /* line-height: 0.4rem;
-    letter-spacing: 2px; */
-  }
-
-  .banner-genefique-1 #title-genefique {
-    font-size: 2.5rem;
-  }
-
-  .banner-genefique-1 #body-restore div {
-    font-size: 1.4rem;
-    line-height: 24px;
-  }
-
-  .banner-genefique-1 #body-radiant {
-    padding-top: 10px;
-    letter-spacing: 0px;
-  }
-
-  .banner-genefique-2 .position-absolute {
-    padding: 0 8px;
-  }
-
-  .banner-genefique-2 #title-instantly {
-    font-size: 1rem;
-  }
-
-  .banner-genefique-2 #title-after {
-    font-size: 0.8rem;
-  }
-
-  .banner-genefique-2 .body-percent {
-    font-size: 1.5rem;
-    line-height: 1.3rem;
-  }
-
-  .banner-genefique-2 .body-percent-desc {
-    font-size: 0.6rem;
-    letter-spacing: 0px;
-  }
-
-  .banner-genefique-2 #body-clinical {
-    font-size: 0.6rem;
-    margin-left: 0;
-  }
-
-  .banner-genefique-2 #genefique-percent-title {
-    margin-bottom: 10px;
-  }
-
-  .banner-idole-1 #title-idole {
-    font-size: 4rem;
-    letter-spacing: -6px;
-    line-height: 4rem;
-  }
-
-  .banner-idole-1 #body-fresh div {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  .banner-idole-2 #idole-perfume-ml .body-ml div {
-    font-size: 1rem;
-    padding: 0 8px;
-  }
-
-  .banner-idole-2 #idole-perfume-ml .body-ml {
-    margin-right: 8px;
-  }
-
-  .banner-idole-3 #title-sophisticated {
-    font-size: 1rem;
-    line-height: 1.3rem;
-  }
-
-  .banner-idole-3 .flower-item {
-    margin-bottom: 25px;
-  }
-
-  .banner-idole-2 .position-absolute#idole-perfume-title {
-    top: 23%;
-  }
-
-  .banner-idole-2 #title-era {
-    font-size: 0.7rem;
-  }
-}
+@media (max-width: 425px) {}
 
 /*// Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
-  .lc-form-card {
-    padding: 50px 60px;
-  }
-}
+@media (min-width: 768px) {}
 
-@media (max-width: 767px) {
-  .nav button.lc-tab-white {
-    font-size: 12px;
-  }
-
-  .sign-up {
-    padding-right: 1.5rem !important;
-    padding-left: 1.5rem !important;
-  }
-}
+@media (max-width: 767px) {}
 
 /*// Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-  .lc-form-card {
-    padding: 38px 130px;
-  }
+@media (min-width: 992px) {}
 
-  .policy-layout {
-    display: grid;
-    grid-template-areas: "sidebar main";
-    grid-template-columns: 1fr 3fr;
-    grid-column-gap: 3rem;
-  }
-
-
-  .policy-sidebar {
-    position: sticky;
-    top: 5rem;
-    display: block !important;
-    height: calc(100vh - 16rem);
-    padding-left: 0.25rem;
-    margin-left: -0.25rem;
-    overflow-y: auto;
-  }
-
-}
-
-@media (max-width: 1024px) and (min-width: 426px) {
-  .banner-genefique-2 #title-instantly {
-    font-size: 1.8rem;
-  }
-
-  .banner-genefique-2 #title-after {
-    font-size: 1.5rem;
-  }
-
-  .banner-genefique-2 .body-percent {
-    font-size: 2.5rem;
-    line-height: 2rem;
-  }
-
-  .banner-genefique-2 .body-percent-desc {
-    font-size: 1rem;
-    letter-spacing: 3px;
-  }
-
-  .banner-genefique-2 #body-clinical {
-    font-size: 0.9rem;
-    font-weight: 100;
-    text-shadow: 2px 2px 2px rgb(0 0 0 / 50%);
-    margin-left: 40px;
-  }
-
-  .banner-idole-2 #idole-perfume-ml .body-ml div {
-    font-size: 1.5rem;
-    padding: 0 18px;
-  }
-
-  .banner-idole-2 .position-absolute#idole-perfume-title {
-    top: 17%;
-  }
-
-  .banner-idole-2 #title-era {
-    font-size: 1rem;
-  }
-
-  .sign-up {
-    padding-right: 5rem !important;
-    padding-left: 5rem !important;
-  }
-}
+@media (max-width: 1024px) and (min-width: 426px) {}
 
 /*// X-Large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {}
